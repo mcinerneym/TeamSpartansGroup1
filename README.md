@@ -1,1 +1,1 @@
-Group 1
+Team Spartans Group 1
