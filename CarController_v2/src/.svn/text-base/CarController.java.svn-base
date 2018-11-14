@@ -1,0 +1,37 @@
+
+public class CarController implements ICarController {
+private ICar car;
+IDoorPanel doorPanel = null;
+
+	@Override
+	public void processRequest(int floorNumber, Direction direction) {
+		// TODO Auto-generated method stub
+		
+		if(direction.equals(Direction.UP))
+		{
+			car.moveUp(floorNumber);
+			car.stop();
+		}
+		
+		if(direction.equals(Direction.DOWN))
+		{
+			car.moveDown(floorNumber);
+			car.stop();
+		}
+	}
+
+	@Override
+	public void setcar(ICar car) {
+		// TODO Auto-generated method stub
+		
+		this.car = car;
+	}
+	public void setDoorPanel(IDoorPanel doorPanel) {
+		this.doorPanel = doorPanel;
+		
+	}
+	}
+
+	
+	
+	

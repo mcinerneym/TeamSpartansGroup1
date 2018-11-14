@@ -1,0 +1,86 @@
+import javax.swing.JPanel;
+
+
+public class DoorPanel implements IDoorPanel
+{
+	ICar car = null;
+	ICarController carController = null;
+	IDoor door = null;
+	
+	DoorPanelUI doorPanelUI = null;
+	String destinationFloorNumber = null;
+	
+	String currentStatus = "OPEN";
+	
+	public JPanel createDoorPanelUI() {
+		// TODO Auto-generated method stub
+		doorPanelUI = new DoorPanelUI();
+				
+		return doorPanelUI ;
+	}
+
+	@Override
+	public void setCar(ICar car) {
+		// TODO Auto-generated method stub
+		this.car = car;
+	}
+
+	@Override
+	public void setCarController(ICarController CarController) {
+		// TODO Auto-generated method stub
+		this.carController = carController;
+		
+	}
+
+	@Override
+	public void setStatusClose(String status)
+	{
+		// TODO Auto-generated method stub
+		this.currentStatus = status;
+		while(!currentStatus.equalsIgnoreCase(status))
+		{
+			door.setDoorStatus("CLOSING");
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			door.closeDoor();
+			door.setDoorStatus("CLOSED");
+			
+		}
+		
+	}
+
+	@Override
+	public void setStatusOpen(String status) {
+		// TODO Auto-generated method stub
+		this.currentStatus = status;
+		while(!currentStatus.equals(status))
+		{
+			door.setDoorStatus("OPENING");
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			door.openDoor();
+			door.setDoorStatus("OPENED");
+		}
+	}
+
+	@Override
+	public void Close() {
+		// TODO Auto-generated method stub
+		currentStatus = "CLOSED";
+	}
+
+	@Override
+	public void Open() {
+		// TODO Auto-generated method stub
+		currentStatus = "OPEN";
+	}
+	
+	}

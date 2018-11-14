@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="/AdminConsole_v3/lib/Algorithm_v2.jar"/>
+	<classpathentry kind="lib" path="/AdminConsole_v3/lib/Car_v2.jar"/>
+	<classpathentry kind="lib" path="/AdminConsole_v3/lib/CarController_v2.jar"/>
+	<classpathentry kind="lib" path="/AdminConsole_v3/lib/Door.jar"/>
+	<classpathentry kind="lib" path="/AdminConsole_v3/lib/DoorPanel.jar"/>
+	<classpathentry kind="lib" path="/AdminConsole_v3/lib/FloorPanel_v2.jar"/>
+	<classpathentry kind="lib" path="/AdminConsole_v3/lib/FloorPanelQueue.jar"/>
+	<classpathentry kind="lib" path="/AdminConsole_v3/lib/MetaController_v2.jar"/>
+	<classpathentry kind="lib" path="/AdminConsole_v3/lib/UserPanel_v2.jar"/>
+	<classpathentry kind="lib" path="/AdminConsole_v3/lib/UserPanelQueue_v2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,52 @@
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+
+public class DoorPanelUI extends JPanel
+{
+
+	DoorPanel doorPanel = null;
+	public DoorPanelUI()
+	{
+	//System.out.println("doorpanel UI initiated");;
+	setLayout (new FlowLayout());
+	JButton openButton = new JButton("OPEN");
+	//System.out.println("open button created");
+	OpenListener openListener = new OpenListener();
+    openButton.addActionListener(openListener);
+    add(openButton);
+	JButton closeButton = new JButton("CLOSE");
+	//System.out.println("close button created");
+	CloseListener closeListener = new CloseListener();
+	closeButton.addActionListener(closeListener);
+	add(closeButton);
+	}
+	
+	private class OpenListener implements ActionListener
+	{
+		public void actionPerformed(ActionEvent event)
+		{
+			
+				System.out.println("inside open button");
+				//TBD create door panel opening
+				
+		}
+	}
+	
+	private class CloseListener implements ActionListener
+	{
+		public void actionPerformed(ActionEvent event)
+		{
+				System.out.println("inside close button");
+				//TBD create door panel closing
+			
+		}
+	}
+
+
+}
+

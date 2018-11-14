@@ -1,0 +1,27 @@
+import java.awt.FlowLayout;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+
+public class SingleDoorUI extends JPanel{
+	
+	
+	JTextField textDoorStatus = null;
+	
+	public SingleDoorUI(){
+		
+		setLayout(new FlowLayout());
+		JLabel label = new JLabel("Single Door");
+		textDoorStatus = new JTextField("CLOSED");
+		add(label);
+		add(textDoorStatus);		
+		
+	}
+	
+	public void setDoorStatus(String doorStatus){
+		textDoorStatus.setText(doorStatus);
+	}
+
+}

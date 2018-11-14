@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/17/trunk/Algorithm/src
+END
+IAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/32/trunk/Algorithm/src/IAlgorithm.java
+END
+ShortestPathAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/21/trunk/Algorithm/src/ShortestPathAlgorithm.java
+END
+LeastTasksAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/17/trunk/Algorithm/src/LeastTasksAlgorithm.java
+END
+RandomAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/31/trunk/Algorithm/src/RandomAlgorithm.java
+END
+AlgorithmConfiguration.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/28/trunk/Algorithm/src/AlgorithmConfiguration.java
+END
+AlgorithmFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/28/trunk/Algorithm/src/AlgorithmFactory.java
+END

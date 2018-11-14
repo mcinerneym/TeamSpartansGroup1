@@ -1,0 +1,48 @@
+import javax.swing.JPanel;
+
+
+public class DoubleDoor implements IDoor{
+
+	@Override
+	public void closeDoor() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void openDoor() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/*@Override
+	public void setCar(ICar car) {
+		// TODO Auto-generated method stub
+		
+	}*/
+
+	@Override
+	public void setCarController(ICarController carController) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public JPanel createDoorUI() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getDoorStatus() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setDoorStatus(String doorStatus) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,27 @@
+import java.awt.FlowLayout;
+
+import javax.swing.JFrame;
+
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		JFrame frame = new JFrame();
+		frame.setLayout(new FlowLayout());
+		
+		UserPanelConfiguration.setActiveButtonColor(UserPanelColor.YELLOW);
+		UserPanelConfiguration.setButtonColor(UserPanelColor.BLUE);
+		for(int i=0;i<5;i++){
+			frame.add(CarFactory.getCarInstance().createCar());
+		}
+		frame.setSize(300*5, 500);
+		frame.setVisible(true);
+
+	}
+
+}

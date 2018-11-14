@@ -1,0 +1,90 @@
+import javax.swing.JPanel;
+
+public class Car implements ICar {
+
+	int currentFloorNumber = 1;
+
+	IDoor door = null;
+
+	String carName = "Car";
+
+	IUserPanel userPanel = null;
+	
+	//IDoorPanel doorPanel = null;
+
+	CarUI carUI = null;
+	
+	ICarController carController = null;
+	
+	IUserPanelQueue queue = null;
+
+	public Car() {
+
+	}
+
+	public ICarController getCarController() {
+		return carController;
+	}
+
+	public void setCarController(ICarController carController) {
+		this.carController = carController;
+	}
+
+	public JPanel createCar() {
+		userPanel = UserPanelFactory.getUserPanelInstance();
+		carUI = new CarUI(currentFloorNumber, carName, door, userPanel, null);
+		return carUI;
+	}
+
+	public int getCurrentFloorNumber() {
+		return currentFloorNumber;
+	}
+
+	public void setCurrentFloorNumber(int currentFloorNumber) {
+		this.currentFloorNumber = currentFloorNumber;
+		if(carUI!=null)
+			carUI.setCurrentFloorNumber(currentFloorNumber);
+	}
+
+	public IDoor getDoor() {
+		return door;
+	}
+
+	public void setDoor(IDoor door) {
+		this.door = door;
+	}
+
+	public String getCarName() {
+		return carName;
+	}
+
+	public void setCarName(String carName) {
+		this.carName = carName;
+	}
+
+	public IUserPanel getUserPanel() {
+		return userPanel;
+	}
+
+	public void setUserPanel(IUserPanel userPanel) {
+		this.userPanel = userPanel;
+	}
+
+	@Override
+	public IUserPanelQueue getUserPanelQueue() {
+		return queue;
+	}
+
+	@Override
+	public void setUserPanelQueue(IUserPanelQueue userPanelQueue) {
+		this.queue = userPanelQueue;
+		
+	}
+
+	/*@Override
+	public void setDoorPanel(IDoorPanel doorPanel) {
+		this.doorPanel = doorPanel;
+		
+	}*/
+
+}

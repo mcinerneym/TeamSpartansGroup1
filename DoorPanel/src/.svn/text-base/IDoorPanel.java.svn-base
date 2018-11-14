@@ -1,0 +1,17 @@
+import javax.swing.JPanel;
+
+
+public interface IDoorPanel {
+
+	JPanel createDoorPanelUI();
+	
+	void setCar(ICar car);
+	void setCarController(ICarController CarController);
+			
+	void setStatusOpen(String status);
+	
+	void setStatusClose(String status);
+	void Open();
+	void Close();
+	
+}

@@ -1,0 +1,73 @@
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+
+import javax.swing.BorderFactory;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+
+public class CarUI extends JPanel {
+	
+	JTextField textCurrentFloorNumber = null;
+	public CarUI(int currentFloorNumber, String carName, IDoor door, IUserPanel  userPanel, String doorPanel){
+		
+		setBorder( BorderFactory.createLineBorder(Color.black));
+		JPanel floor = new JPanel();
+		floor.setLayout(new FlowLayout());
+		JLabel label = new JLabel(carName);
+		JLabel floorNumber = new JLabel("FloorNumber");
+		textCurrentFloorNumber = new JTextField(new Integer(currentFloorNumber).toString());
+		floor.add(floorNumber);
+		floor.add(textCurrentFloorNumber);
+		textCurrentFloorNumber.setEditable(false);
+			
+		int centerRow = 0;
+		setLayout(new GridBagLayout());
+		GridBagConstraints gbc = new GridBagConstraints();
+	    gbc.gridy = centerRow++;
+		
+	    add(label,gbc);
+	    
+	    
+	    gbc.gridy = centerRow++;
+	    gbc.gridx = 0;
+	    add(floor,gbc);
+	    
+	    gbc.gridy = centerRow++;
+	    gbc.gridx = 0;
+	    add(door.createDoorUI(),gbc);
+	    
+	    gbc.gridy = centerRow++;
+	    gbc.gridx = 0;
+	   add(userPanel.createUserPanel(), gbc);
+	    
+	    gbc.gridy = centerRow++;
+	    gbc.gridx = 0;
+	 //   add(doorPanel.createDoorPanel(), gbc);
+		
+		
+	}
+	
+	public void setCurrentFloorNumber(int currentFloorNumber){
+		textCurrentFloorNumber.setBackground(Color.yellow);
+		textCurrentFloorNumber.setText(new Integer(currentFloorNumber).toString());
+		
+	}
+	
+	/*public static void main(String args[]) throws InterruptedException{
+		JFrame frame = new JFrame();
+		frame.setLayout(new FlowLayout());
+		frame.setPreferredSize(new Dimension(300, 300));
+		SingleDoor door = new SingleDoor();
+		
+		UserPanelInterface panel = new UserPanel();
+		panel.setNumberFloors(10);
+		frame.add(new Car("Hello", new SingleDoor(), panel));
+		frame.setVisible(true);
+		
+		
+	}*/
+}

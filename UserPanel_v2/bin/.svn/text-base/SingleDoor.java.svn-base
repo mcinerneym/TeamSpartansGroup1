@@ -1,0 +1,59 @@
+import javax.swing.JPanel;
+
+
+public class SingleDoor implements IDoor{
+	
+	
+	//ICar car = null;
+	
+	ICarController carController = null;
+	
+	String doorStatus = "CLOSED";
+	
+	SingleDoorUI singleDoorUI = null;
+
+	@Override
+	public void closeDoor() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void openDoor() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/*@Override
+	public void setCar(ICar car) {
+		this.car = car;
+		
+	}*/
+
+	@Override
+	public void setCarController(ICarController carController) {
+		this.carController = carController;
+		
+	}
+
+	@Override
+	public JPanel createDoorUI() {
+		
+		singleDoorUI = new SingleDoorUI();
+		return singleDoorUI;
+	}
+
+	@Override
+	public String getDoorStatus() {
+		// TODO Auto-generated method stub
+		return doorStatus;
+	}
+
+	@Override
+	public void setDoorStatus(String doorStatus) {
+		this.doorStatus = doorStatus;
+		singleDoorUI.setDoorStatus(doorStatus);
+		
+	}
+
+}

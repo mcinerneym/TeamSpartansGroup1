@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="C:/Users/Anshu/Desktop/Elevator_v2/jars/Algorithm_v2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Anshu/Desktop/Elevator_v2/jars/Car_v2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Anshu/Desktop/Elevator_v2/jars/CarController_v2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Anshu/Desktop/Elevator_v2/jars/Door.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Anshu/Desktop/Elevator_v2/jars/DoorPanel.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Anshu/Desktop/Elevator_v2/jars/FloorPanel_v2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Anshu/Desktop/Elevator_v2/jars/FloorPanelQueue.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Anshu/Desktop/Elevator_v2/jars/MetaController_v2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Anshu/Desktop/Elevator_v2/jars/UserPanel_v2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Anshu/Desktop/Elevator_v2/jars/UserPanelQueue_v2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

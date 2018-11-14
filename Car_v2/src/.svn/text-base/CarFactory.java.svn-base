@@ -1,0 +1,37 @@
+
+public class CarFactory {
+	
+	
+	
+	public static ICar getCarInstance(){
+		
+		ICar car = null;
+		if(CarConfiguration.getCarType().equals("default")){
+			car = new Car();
+		}
+		
+		if(CarConfiguration.getCarControllerType().equals("default")){
+			car.setCarController(new CarController());
+		}
+		
+		if(CarConfiguration.getDoorType().equals("single")){
+			car.setDoor(new SingleDoor());
+		}
+		
+		if(CarConfiguration.getUserPanelType().equals("default")){
+			car.setUserPanel(new UserPanel());
+		}
+		
+		if(CarConfiguration.getUserPanelQueueType().equals("default")){
+			car.setUserPanelQueue(new UserPanelQueue());
+		}
+		
+		/*if(CarConfiguration.getDoorPanelType().equals("default")){
+			car.setDoorPanel(new DoorPanel());
+		}*/
+		
+		
+		return car;
+	}
+
+}

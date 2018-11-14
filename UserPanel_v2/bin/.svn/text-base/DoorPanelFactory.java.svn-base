@@ -1,0 +1,26 @@
+
+public class DoorPanelFactory {
+
+	public static IDoorPanel createDoorPanel()
+	{
+		
+		IDoorPanel iDoorPanel= null;
+		
+		if(DoorPanelConfiguration.getDoorPanelType().equalsIgnoreCase("default")){
+			iDoorPanel = new DoorPanel();		
+		}
+		
+		if(DoorPanelConfiguration.getCarType().equalsIgnoreCase("default")){
+			ICar car = new Car();
+			iDoorPanel.setCar(car);
+			
+		}
+		
+		if(DoorPanelConfiguration.getCarControllerType().equalsIgnoreCase("default")){
+			ICarController carController = new CarController();
+			iDoorPanel.setCarController(carController);
+		} 
+		
+	
+	return iDoorPanel;
+}}

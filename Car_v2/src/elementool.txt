@@ -1,0 +1,29 @@
+Elementool is the leading provider of web based project management tools for help desk, bug and defect tracking and time tracking tools. Customers from all over the world use our web based project management tools on a daily basis as part of their project development and testing process. Among our customers that utilize our project management software are Fortune 500 companies, big five consulting firms, international banks, automotive manufacturers, business websites, IT consulting companies and software start-ups.
+
+Using Elementool is easy. All you need to do is open an account using the Elementool website. There is no need to purchase or download any software. Elementool is just a click away.
+
+Issue Tracking
+
+Enables software developers to track new bugs, prioritize and assign bugs to team members, generate bug reports, send email messages between users, attach files, type notes on a message board, customize the account according to their special needs and more.
+
+Time Tracking
+
+This process management tool helps project managers to monitor projects and resource performance, define different tasks, compare estimated time requirements with actual time reports, calculate the project cost based on the time reports submitted by the users, create Gantt charts and more.
+
+Learn more | View demo | Case study
+
+Test Cases
+
+Allows you to manage and delegate test cases so that information does not get lost or overlooked. To track new test cases, define test case steps and procedure, prioritize and assign test cases to your team members, generate test case reports and custom the accounts according to your needs.
+
+Learn more
+File Sharing
+
+Enables software developers and testers to upload and share files from any place in the world. To collaborate on projects, members of your software development team need to share files. Web-based file sharing from Elementool quick to set up, easy to use and cost-effective.
+
+Learn more
+Docs
+
+lets you create, save and share documents and spreadsheets. With Docs you can share your files through email, with other Elementool users, or over the web by publishing your documents to the internet. Elementool's intuitive interface combined with a broad range of features brings an added level of convenience to the Elementool experience.
+
+Learn more
