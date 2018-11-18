@@ -14,6 +14,10 @@ public class AlgorithmFactory {
 			algorithm = new ScanAlgorithm();
 		}
 		/* **********End Add************ */
+		//Added by Michael McInerney
+		else if(AlgorithmConfiguration.getAlgorithm().equalsIgnoreCase("First in first out")){
+			algorithm = new FirstInFirstOutAlgorithm();
+		}
 		
 		return algorithm;
 	}

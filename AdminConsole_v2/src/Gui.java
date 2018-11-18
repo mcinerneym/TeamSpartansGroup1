@@ -232,7 +232,7 @@ public class Gui extends javax.swing.JFrame {
         
         jLabel12.setText("Alarm Type");
 
-        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Shortest Path", "Random", "SCAN" }));
+        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Shortest Path", "Random", "SCAN", "First In First Out" }));
         jComboBox10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox10ActionPerformed(evt);
