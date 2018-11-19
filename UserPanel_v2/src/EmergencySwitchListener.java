@@ -29,7 +29,7 @@ public class EmergencySwitchListener implements ActionListener{
 		System.out.println("Emergency pressed");
 
 		if(buttonPressed.getBackground() == Color.GRAY) {
-			
+			buttonPressed.setBackground(Color.RED);	
 			System.out.println("Status: On!");
 			car.getUserPanel().processAlarmRequest("emergency", car.getCarID());
 			car.getCarController().processAlarmRequest("emergency",car.getCarID());

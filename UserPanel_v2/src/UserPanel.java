@@ -168,6 +168,8 @@ public class UserPanel implements IUserPanel {
 				userPanelUIOdd.alarmOn.setBackground(Color.GRAY);
 			}
 		}
+		
+		
 		if(alarmStatus.equalsIgnoreCase("on")){
 			System.out.println("userpanel - alarm on");
 			car.setStatus(CarStatus.ALARM_ON);
