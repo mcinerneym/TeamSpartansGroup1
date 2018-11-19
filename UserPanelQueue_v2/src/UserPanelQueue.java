@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.util.Collections;
 import java.util.LinkedList;
 
@@ -208,6 +209,10 @@ public class UserPanelQueue implements IUserPanelQueue {
 					if(car.getUserPanel().getAlarmStatus().equalsIgnoreCase("on"))
 					{
 						car.setStatus(CarStatus.ALARM_ON);
+						System.out.println("upanelqueue - status-alarmOn" + car.getStatus());
+					}
+					else if(car.getUserPanel().getAlarmStatus().equalsIgnoreCase("emergency")) {
+						car.setStatus(CarStatus.EMERGENCY_ON, Color.RED );
 						System.out.println("upanelqueue - status-alarmOn" + car.getStatus());
 					}
 					//end

@@ -30,6 +30,8 @@ public class UserPanelUI extends JPanel  {
 	
 	 JButton alarmOn;
 	 JButton alarmOff;
+	 JButton emergencySwitch;
+	
 	//public UserPanelUI(int numFloors, UserPanelColor buttonColor,
 		//	UserPanelColor activeButtonColor, ICar car) {
 		
@@ -45,7 +47,7 @@ public class UserPanelUI extends JPanel  {
 		this.buttonColor = buttonColor;
 
 		int newNumFloors = 0;
-		int numButtons = numFloors + 2;  //for alarmOn and alarmOff buttons;
+		int numButtons = numFloors + 3;  //for alarmOn and alarmOff buttons;
 		
 		//add code - Lavanya
 		this.alarmType = alarmType; //end
@@ -108,7 +110,13 @@ public class UserPanelUI extends JPanel  {
 		alarmOff.addActionListener(new AlarmButtonListener("off",numFloors,car));
 		add(alarmOn);
 		add(alarmOff);
-	
+		
+		emergencySwitch = new JButton("EMERGENCY");
+		emergencySwitch.setSize(200,200);
+		emergencySwitch.setMargin(new Insets(1,1,1,1));
+		emergencySwitch.setBackground(Color.GRAY);
+		emergencySwitch.addActionListener(new EmergencySwitchListener(numFloors, car));
+		add(emergencySwitch);
 		
         //end
 	}

@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 import javax.swing.JPanel;
 
 public class Car implements ICar {
@@ -152,6 +154,14 @@ public class Car implements ICar {
 		this.status = status;
 		if(carUI!=null)
 			carUI.setCarStatus(status);
+		
+	}
+	
+	@Override
+	public void setStatus(CarStatus status, Color color) {
+		this.status = status;
+		if(carUI!=null)
+			carUI.setCarStatus(status, color);
 		
 	}
 

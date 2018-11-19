@@ -1,4 +1,5 @@
 import javax.swing.JPanel;
+import java.awt.Color;
 
 
 public interface ICar {
@@ -32,6 +33,9 @@ public interface ICar {
 	CarStatus getStatus();
 	
 	void setStatus(CarStatus status);
+	
+	void setStatus(CarStatus status, Color color);
+
 	
 	IUserPanel getUserPanel();
 

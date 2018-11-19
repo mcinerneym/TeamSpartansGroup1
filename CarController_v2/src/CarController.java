@@ -82,7 +82,6 @@ public class CarController implements ICarController {
 					|| car.getStatus().equals(CarStatus.IDLE)) && !car.getDoor().getDoorStatus().equalsIgnoreCase("Opened")) {
 				
 				
-				
 				doorPanel.activateOpenButton();
 				synchronized (door) {
 
@@ -141,7 +140,8 @@ public class CarController implements ICarController {
 	
 	public void processAlarmRequest(String alarmStatus, int carId){
 		    
-		    if(alarmStatus.equalsIgnoreCase("on")||alarmStatus.equalsIgnoreCase("off"))
+		    if(alarmStatus.equalsIgnoreCase("on")||alarmStatus.equalsIgnoreCase("off") || alarmStatus.equalsIgnoreCase("emergency") || alarmStatus.equalsIgnoreCase("emergency off")
+		    		)
 		    	  System.out.println("inside processAlarmRequest in car controller");
 			       floorPanel.processAlarmRequest(alarmStatus, carId);
 	}

@@ -85,6 +85,16 @@ public class CarUI extends JPanel {
 		
 	}
 	
+	public void setCarStatus(CarStatus carStatus, Color color){
+		textStatus.setBackground(color);
+		textStatus.setText(carStatus.toString());
+		
+		if(carStatus.equals(CarStatus.IDLE)){
+			textStatus.setBackground(null);
+			textCurrentFloorNumber.setBackground(null);
+		}
+		
+	}
 	public void setCarStatus(CarStatus carStatus){
 		textStatus.setBackground(Color.yellow);
 		textStatus.setText(carStatus.toString());

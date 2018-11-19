@@ -153,11 +153,11 @@ public class FloorPanelUI extends JPanel {
 	//add code - Lavanya
 	
 	void processAlarmRequest(String status, int carId){
-		if(status.equalsIgnoreCase("on")){
+		if(status.equalsIgnoreCase("on") || status.equalsIgnoreCase("emergency")){
 			System.out.println("in floorUI - alarm on");
 			   lstAlrmInd.get(carId-1).setBackground(Color.RED);
 		}
-		if(status.equalsIgnoreCase("off")){
+		if(status.equalsIgnoreCase("off") || status.equalsIgnoreCase("emergency off")){
 			System.out.println("in floorUI - alarm off"); 
 			for(int i=1;i<=this.currentFloorNumber;i++)
 			    lstAlrmInd.get(carId-1).setBackground(Color.ORANGE);
