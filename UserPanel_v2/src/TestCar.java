@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 import javax.swing.JPanel;
 
 
@@ -135,6 +137,12 @@ public class TestCar implements ICar {
 	public int getCarID() {
 		// TODO Auto-generated method stub
 		return carId;
+	}
+
+	@Override
+	public void setStatus(CarStatus status, Color color) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

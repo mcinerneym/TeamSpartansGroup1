@@ -17,7 +17,7 @@ public class FirstInFirstOutAlgorithm implements IAlgorithm {
 			ICar currentCar = lstCars.get(i);
 			int carFloor = currentCar.getCurrentFloorNumber();
 			CarStatus currentStatus = currentCar.getStatus();
-			
+			   
 			//The best car for the user would be the one going toward their destination floor number
 			if(destinationFloorNumber > carFloor) {
 				if(currentStatus == CarStatus.MOVING_UP) {
