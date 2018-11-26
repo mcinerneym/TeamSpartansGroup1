@@ -11,7 +11,9 @@ public class EmergencySwitchListener implements ActionListener{
 
 	
 	ICar car = null;
-	int numberOfFloors;
+	int numberOfFloors; 
+	String state = "";
+	String status = "";
 	
 	public EmergencySwitchListener(int numberOfFloors, ICar car){
 		
@@ -19,27 +21,38 @@ public class EmergencySwitchListener implements ActionListener{
 		this.numberOfFloors = numberOfFloors;
 	}
 	
-	
-	
-	
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
 		JButton buttonPressed = (JButton)e.getSource();
 		System.out.println("Emergency pressed");
-
+		
 		if(buttonPressed.getBackground() == Color.GRAY) {
 			buttonPressed.setBackground(Color.RED);	
 			System.out.println("Status: On!");
-			car.getUserPanel().processAlarmRequest("emergency", car.getCarID());
-			car.getCarController().processAlarmRequest("emergency",car.getCarID());
+			state = "On";
+			status = "emergency";
+			try {
+				car.getUserPanel().processAlarmRequest(status, car.getCarID());
+				car.getCarController().processAlarmRequest(status,car.getCarID());
+			} catch (NullPointerException ex) {
+				return;
+			}
 		}else {
 			buttonPressed.setBackground(Color.GRAY);	
 			System.out.println("Status: Off!");
-			car.getUserPanel().processAlarmRequest("emergency off", car.getCarID());
-			car.getCarController().processAlarmRequest("emergency off",car.getCarID());
-			car.setStatus(CarStatus.IDLE);
-		}
-					
-	}	
+			state = "Off";
+			status = "emergency off";
+			try {
+				car.getUserPanel().processAlarmRequest(status, car.getCarID());
+				car.getCarController().processAlarmRequest(status,car.getCarID());
+				car.setStatus(CarStatus.IDLE);
+			} catch (NullPointerException ex) {
+				return;
+			}
+			
+		}			
+	}
+	
 }
